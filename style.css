@@ -13,6 +13,26 @@
     font-size: 1.3rem;
 }
 
+/************ input **************/
+
+.user-input {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+input {
+  width: 40%;
+  border-radius: 1em;
+  height: 2.5em;
+  box-shadow: 0 0 3px rgba(0,0,0,0.2);
+  margin: 0 auto;
+  font-family: inherit;
+  font-size: inherit;
+  padding: 0 1em;
+}
+
 /*************** output style ************/
 h3 {
   color:rgba(116, 103, 103, .5);
@@ -30,6 +50,7 @@ ul li {
   text-decoration: line-through;
 }
 
+/********* div with icons **********/
 ul li div {
   display: none;
   width: 20%;
@@ -51,12 +72,6 @@ i {
 
 .shoppingItem:hover {
   background:rgba(16, 172, 132, .5);
-  color: white;
-}
-
-
-
-#controls {
   color: white;
 }
 
@@ -90,6 +105,7 @@ i {
   top: 4px;
   transform: rotate(-2.5deg);
 }
+
 .shopping-list::after {
   background: #f6f6f6;
   box-shadow: 0 0 3px rgba(0,0,0,0.2);
@@ -98,19 +114,3 @@ i {
   transform: rotate(1.4deg);
 }
 
-.user-input {
-    width: 100%;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-}
-
-input {
-    width: 40%;
-    border-radius: 1em;
-    height: 2.5em;
-    box-shadow: 0 0 3px rgba(0,0,0,0.2);
-    margin: 0 auto;
-    font-family: inherit;
-    font-size: inherit;
-}

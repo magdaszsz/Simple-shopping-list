@@ -11,7 +11,6 @@ input.addEventListener('keypress', function(e) {
        renderItem();
        clearInput();
     }
-    
 })
 
 const renderItem = function() {
@@ -36,7 +35,6 @@ const renderItem = function() {
         icons.style.display = "none"
     })
     shoppingList.appendChild(item);
-    
 }
 
 
