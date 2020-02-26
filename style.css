@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    height: 100vh;
+    padding: 2em;
+    font-family: 'Caveat';
+    font-size: 1.3rem;
+}
+
+/*************** output style ************/
+h3 {
+  color:rgba(116, 103, 103, .5);
+}
+
+ul {
+    list-style-type: none;
+}
+
+ul li {
+  margin: 1em;
+}
+
+.checked {
+  text-decoration: line-through;
+}
+
+ul li div {
+  display: none;
+  width: 20%;
+}
+
+i {
+  margin-right:1em;
+}
+
+.done {
+  color: green;
+}
+
+.shoppingItem {
+  padding: 0.6em;
+  display: flex;
+  justify-content: space-between;
+}
+
+.shoppingItem:hover {
+  background:rgba(16, 172, 132, .5);
+  color: white;
+}
+
+
+
+#controls {
+  color: white;
+}
+
+.shopping-list {
+  background: #fff;
+  box-shadow: 0 0 1em rgba(0,0,0,0.3);
+  margin: 26px auto 0;
+  max-width: 40%;
+  min-height: 60%;
+  padding: 24px;
+  position: relative;
+  width: 80%;
+  font-family: 'Caveat';
+  font-size: 1.1rem;
+}
+
+
+.shopping-list::before,
+.shopping-list::after {
+  content: "";
+  height: 98%;
+  position: absolute;
+  width: 100%;
+  z-index: -1;
+}
+
+.shopping-list::before {
+  background: #fafafa;
+  box-shadow: 0 0 8px rgba(0,0,0,0.2);
+  left: -5px;
+  top: 4px;
+  transform: rotate(-2.5deg);
+}
+.shopping-list::after {
+  background: #f6f6f6;
+  box-shadow: 0 0 3px rgba(0,0,0,0.2);
+  right: -3px;
+  top: 1px;
+  transform: rotate(1.4deg);
+}
+
+.user-input {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+input {
+    width: 40%;
+    border-radius: 1em;
+    height: 2.5em;
+    box-shadow: 0 0 3px rgba(0,0,0,0.2);
+    margin: 0 auto;
+    font-family: inherit;
+    font-size: inherit;
+}
