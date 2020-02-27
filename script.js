@@ -6,7 +6,7 @@ const clearInput = function() {
     input.value = "";
 }
 
-input.addEventListener('keypress', function(e) {
+input.addEventListener('keydown', function(e) {
     if(e.keyCode === 13) {
        renderItem();
        clearInput();
