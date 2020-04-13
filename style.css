@@ -73,6 +73,7 @@ i {
   padding: 0.6em;
   display: flex;
   justify-content: space-between;
+  position: relative;
 }
 
 .shoppingItem:hover {
@@ -90,6 +91,10 @@ i {
 
 .yellow:hover {
   color: yellow;
+}
+
+.newInput {
+  height: 1.8em;
 }
 
 .shopping-list {

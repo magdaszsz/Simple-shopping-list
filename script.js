@@ -32,24 +32,36 @@ const renderItem = function() {
     const editIcon = item.querySelector('.fa-pencil-alt');
     editIcon.classList.add('yellow');
     editIcon.addEventListener('click', function(e) {
+        const icons = item.querySelector('div');
+        icons.style.display = "none"
+        const element = e.target.parentElement.parentElement;
+        const existingNote = element.textContent;
         const newInput = document.createElement('input');
-        const hej = e.target.parentElement.parentElement;
-        hej.appendChild(newInput);
+        newInput.classList.add('newInput');
+        newInput.setAttribute('placeholder', existingNote);
+        element.appendChild(newInput);
         editIcon.parentElement.parentElement.childNodes[0].textContent = '';
         newInput.addEventListener('mouseleave', function() {
-            const newNote = `- ${newInput.value}`;
+            if (newInput.value === '') {
+                let newNote = `${existingNote}`;
+                editIcon.parentElement.parentElement.childNodes[0].textContent = newNote;
+                newInput.remove();
+            } else {
+            let newNote = `- ${newInput.value}`;
             editIcon.parentElement.parentElement.childNodes[0].textContent = newNote;
-            newInput.remove();
-        })
-
+            newInput.remove();}
+            })
         newInput.addEventListener('keydown', function(e) {
-            if (e.keyCode === 13) {
-                const newNote = `- ${newInput.value}`;
+            if (e.keyCode === 13 && newInput.value === '') {
+            let newNote = `${existingNote}`;
             editIcon.parentElement.parentElement.childNodes[0].textContent = newNote;
             newInput.remove();
+            }  else if (e.keyCode === 13) {
+                let newNote = `-${newInput.value}`;
+                editIcon.parentElement.parentElement.childNodes[0].textContent = newNote;
+                newInput.remove();
             }
-        })
-
+        })   
     });
     item.addEventListener('mouseenter', function() {
         const icons = item.querySelector('div');
@@ -61,7 +73,6 @@ const renderItem = function() {
     })
     shoppingList.appendChild(item);
 }
-
 
 
 
